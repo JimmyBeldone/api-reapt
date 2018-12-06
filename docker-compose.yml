@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  mongodb:
+    image: 'bitnami/mongodb:latest'
+    ports:
+      - "27017:27017"
+    volumes:
+      - .docker/db/mongo:/bitnami
+    environment:
+      - MONGODB_USERNAME=root
+      - MONGODB_PASSWORD=password
+      - MONGODB_DATABASE=my_database
